@@ -7,10 +7,13 @@
 .game-board {
   width: 80%;
   height: 500px;
-  border: 1px solid #333;
-  margin: 0 au;
+  border-bottom: 15px solid rgb(51, 208, 69);
+  margin: auto;
+  margin-top: 100px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(#59caf7, #e0f6ff);
+  justify-content: center;
 }
 
 .pipe {
@@ -51,7 +54,58 @@
   60% {
     bottom: 200px;
   }
+
   100% {
     bottom: 0;
+  }
+}
+
+@keyframes game-over {
+  0% {
+    bottom: 110px;
+  }
+
+  50% {
+    bottom: 130px;
+  }
+
+  60% {
+    bottom: 130px;
+  }
+
+  100% {
+    bottom: -110px;
+  }
+}
+
+.clouds1 {
+  position: absolute;
+  margin-top: 80px;
+  width: 500px;
+  animation: clouds-animation 30s infinite linear;
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+.clouds {
+  position: absolute;
+  margin-top: 10px;
+  width: 550px;
+  animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -550px;
+  }
+  to {
+    right: 100%;
   }
 }
